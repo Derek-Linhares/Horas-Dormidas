@@ -141,9 +141,9 @@ input {
   margin: auto;
   text-align: center;
   width: 100rem;
+  height: 15rem;
   font-size: 4rem;
   text-shadow: 0.1rem 0.1rem #000000;
-  display: inline-block;
 }
 
 @keyframes go-surgir {
