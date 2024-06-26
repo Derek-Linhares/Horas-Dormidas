@@ -144,6 +144,7 @@ input {
   height: 15rem;
   font-size: 4rem;
   text-shadow: 0.1rem 0.1rem #000000;
+  color: transparent;
 }
 
 @keyframes go-surgir {
