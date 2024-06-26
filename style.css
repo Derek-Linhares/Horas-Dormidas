@@ -116,6 +116,7 @@ input {
 
   font-size: 4rem;
   animation: go-input2 2s infinite alternate;
+  text-align: center;
 }
 
 #label1 {
