@@ -11,47 +11,58 @@
 </head>
 
 <body >
+    <div class=" overlay2">
+    <div class="textBox">
+        Esta aplicação utiliza recursos de áudio. Por favor, aumente o volume do seu dispositivo para uma melhor
+        experiência.
+    </div>
+    <button id="iniciar" onclick="sumirOverlay()"></button>
+
+
+    </div>
     <div class=" container">
 
-    <h1 id="texto">Por quanto tempo eu dormi? <img src="./assets/sleep.svg" id="nuvem" onclick="playSound(bocejo)">
-    </h1> <br>
-    <div class="box1">
+        <h1 id="texto">Por quanto tempo eu dormi? <img src="./assets/sleep.svg" id="nuvem" onclick="playSound(bocejo)">
+        </h1> <br>
+        <div class="box1">
 
 
-        <div id="primeiro"><label id="label1" for="idade">Insira sua idade</label> <br>
-            <input type="number" name="idade" id="idade" maxlength="2" placeholder="Quantos anos você tem?" min="1"
-                max="99" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> <br>
-        </div>
-        <div id="segundo"> <label id="label2" for="sono">Insira quantas horas de sono</label> <br>
-            <input type="number" min="1" id="sono" max="24" maxlength="2"
-                onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="sono"
-                placeholder="Horas de sono diárias"> <br>
-        </div>
-        <script>
-            document.querySelectorAll('input[type="number"]').forEach(input => {
-                input.oninput = () => {
-                    if (input.value.length > input.maxLength) input.value = input.value.slice(0,
-                        input.maxLength)
-                }
-            })
-        </script>
-    </div>
-
-    <div id="box2">
-
-        <button class="btn" onclick="calcular() , animar()"><img src="./assets/1295100.svg" id="zzz" alt=""></button>
-        <div class="cloud">
-            <div id="resultado"></div>
+            <div id="primeiro"><label id="label1" for="idade">Insira sua idade</label> <br>
+                <input type="number" name="idade" id="idade" maxlength="2" placeholder="Quantos anos você tem?" min="1"
+                    max="99" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> <br>
+            </div>
+            <div id="segundo"> <label id="label2" for="sono">Insira quantas horas de sono</label> <br>
+                <input type="number" min="1" id="sono" max="24" maxlength="2"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="sono"
+                    placeholder="Horas de sono diárias"> <br>
+            </div>
+            <script>
+                document.querySelectorAll('input[type="number"]').forEach(input => {
+                    input.oninput = () => {
+                        if (input.value.length > input.maxLength) input.value = input.value.slice(0,
+                            input.maxLength)
+                    }
+                })
+            </script>
         </div>
 
-        <audio src="./assets/choro bebe.mp3" id="erro"></audio>
-        <audio src="./assets/ronco.mp3" id="ronco"></audio>
-        <audio src="./assets/caixinha de musica.mp3" autoplay loop volume=0.5></audio>
-        <audio src="./assets/bocejo.mp3" id="bocejo"></audio>
-    </div>
+        <div id="box2">
+
+            <button class="btn" onclick="calcular() , animar()"><img src="./assets/1295100.svg" id="zzz"
+                    alt=""></button>
+            <div class="cloud">
+                <div id="resultado"></div>
+            </div>
+
+            <audio src="./assets/choro bebe.mp3" id="erro"></audio>
+            <audio src="./assets/ronco.mp3" id="ronco"></audio>
+            <audio id="caixinha" src="./assets/caixinha.mp3" preload="auto" loop></audio>
+            <audio src="./assets/bocejo.mp3" id="bocejo"></audio>
+        </div>
 
 
     </div>
+
     <script src="./script.js"></script>
     </body>
 

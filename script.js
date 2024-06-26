@@ -1,11 +1,14 @@
 let bocejo = document.querySelector("#bocejo");
 
-function playSound(audio) {
-  audio.currentTime = 0;
-  audio.play();
-  audio.volume = 0.2;
+function playSound(element) {
+  if (element && typeof element.play === "function") {
+    element.play().catch(function (error) {
+      console.error("Erro ao tentar reproduzir o som:", error);
+    });
+  } else {
+    console.error("Elemento de áudio não encontrado ou play não é uma função.");
+  }
 }
-
 function animar() {
   let animacao = document.querySelector("#resultado");
   animacao.style.color = "transparent";
@@ -45,5 +48,16 @@ function calcular() {
     resultado.innerHTML = `Você viveu até agora o total aproximado de ${horasDeVida} 
         horas, nesse intervalo você dormiu por ${horasDormidas} horas!!! Isso é equivalente a passar 
         ${total}% da sua vida dormindo.`;
+  }
+}
+
+function sumirOverlay() {
+  let caixinha = document.querySelectorAll("#caixinha");
+  let overlays = document.getElementsByClassName("overlay2");
+  for (let i = 0; i < overlays.length; i++) {
+    overlays[i].style.visibility = "hidden";
+
+    let caixinha = document.getElementById("caixinha");
+    playSound(caixinha);
   }
 }
