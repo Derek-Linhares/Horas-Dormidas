@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-image: url(./assets/SL-072620-33020-18.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.container {
+  width: 100rem;
+  color: whitesmoke;
+  text-shadow: 0.2rem 0.2rem #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  width: 100rem;
+  height: 30rem;
+
+  text-align: center;
+  font-size: 5.6rem;
+  margin-top: 15rem;
+  animation: go-back 1s infinite alternate;
+}
+
+.box1 {
+  width: 100rem;
+  height: 20rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+button {
+  font-size: 4rem;
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+  animation: go-nuvem 1.5s infinite alternate;
+}
+
+#zzz {
+  width: 20rem;
+  height: 20rem;
+}
+
+input {
+  width: 45rem;
+  height: 7.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  box-shadow: #000000 0.2rem;
+  font-size: 3.5rem;
+}
+
+#primeiro {
+  width: 46rem;
+
+  animation: go-input1 1.7s infinite alternate;
+
+  text-align: center;
+}
+
+#segundo {
+  width: 46rem;
+
+  font-size: 4rem;
+  animation: go-input2 2s infinite alternate;
+}
+
+#label1 {
+  font-size: 3.5rem;
+}
+
+#label2 {
+  font-size: 3.35rem;
+}
+
+#box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rem;
+  height: 40rem;
+
+  flex-direction: column;
+}
+
+#resultado {
+  margin: auto;
+  text-align: center;
+  width: 100rem;
+  font-size: 4rem;
+  text-shadow: 0.1rem 0.1rem #000000;
+  display: inline-block;
+}
+
+@keyframes go-surgir {
+  from {
+    color: transparent;
+    text-shadow: none;
+  }
+
+  to {
+    color: rgb(000, 000, 000);
+    text-shadow: 0.1rem 0.1rem #000000;
+  }
+}
+
+#nuvem {
+  animation: go-back 1s infinite alternate;
+  cursor: pointer;
+  width: 10rem;
+  height: 10rem;
+}
+
+#texto {
+  animation: go-up 2s infinite alternate;
+}
+
+@keyframes go-back {
+  from {
+    transform: translateY(1rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes go-up {
+  from {
+    transform: translateY(0.5rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes go-nuvem {
+  from {
+    transform: translateY(1rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes go-input1 {
+  from {
+    transform: translateY(0.5rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes go-input2 {
+  from {
+    transform: translateY(0.7rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 2560px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1920px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 3px;
+  }
+}
